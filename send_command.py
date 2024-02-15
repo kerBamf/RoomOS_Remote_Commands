@@ -12,7 +12,9 @@ import xml.etree.ElementTree as ET
 #Loading environment variables
 load_dotenv()
 PASSWORD = os.environ.get("PASSWORD")
-FILENAME = os.environ.get("FILENAME")
+# FILENAME = os.environ.get("FILENAME")
+user_input = input("Please enter xls filename from XML Files directory to be used: ")
+FILENAME = f'./XML_FILES/{user_input}'
 
 # disable ssl warning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
